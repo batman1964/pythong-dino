@@ -1,0 +1,48 @@
+#import the pygame library and intalise the game engine
+import pygame
+pygame.init()
+
+#open a new window, caption it "Dino"
+screen = pygame.display.set_mode((700, 500))
+
+#heres the variables that runs our game loop
+doExit = False
+
+#the clock will be used to control how fast the screen updates
+clock = pygame.time.Clock()
+p1x = 20
+p1y = 200
+touchground = False
+while not doExit:  #game loop-----------------------------------
+    #event queuq stuff---------------
+    clock.tick(60)#sets FPS
+   
+    for event in pyame.event.get(): #chec if user did something
+        if event.type == pygame.QUIT: #check is user clocked close
+            doExit = True #Flag that we are doneso we exit game loop
+           
+           
+           
+    #game logic will go here------------------
+    if keys[pygame.K_i]:
+        p2y-=5
+    if keys[pygame.K_k]:
+        p2y+=5
+    #render section will go here
+    screen.fill((0, 0, 0))#wipe screen      
+    pygame.draw.rect(screen, (255, 255, 255), (p1x, p1y, 20, 100), 1)        
+   
+    #timer section
+    if(p1y+30) < 480:
+        p1t +=1
+   
+    #update the screen
+    pygame.display.flip()
+
+#end of game loop----------
+           
+           
+           
+           
+           
+pygame.quit()#when game is done close down pygame          
